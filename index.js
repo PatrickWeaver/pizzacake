@@ -2,7 +2,13 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	bodyParser = require('body-parser');
 
-var db = mongoose.connect('mongodb://localhost/pcAPI');
+var db;
+
+if (process.env.ENV == 'staging'){
+	db = mongoose.connect(process.env.MONGODB_URI);
+} else {
+	db = mongoose.connect('mongodb://localhost/pcAPI');
+}
 
 var Pizza = require('./models/pizzaModel')
 
