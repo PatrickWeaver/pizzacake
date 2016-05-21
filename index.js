@@ -1,14 +1,23 @@
-var express = require('express');
+var express = require('express'),
+	mongoose = require('mongoose'),
+	bodyParser = require('body-parser');
+
+var db = mongoose.connect('mongodb://localhost/pcAPI');
+
+var Pizza = require('./models/pizzaModel')
 
 var app = express();
 var port = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+pizzaRouter = require('./Routes/pizzaRoutes')(Pizza);
+app.use('/api/Pizza', pizzaRouter);
+
+
 app.get('/', function(req,res){
-	res.send('<html><head>' +
-			'<title>🍕🍰</title>' +
-			'<style>#pc { font-size: 300px; text-align: center; margin-top: 10%;} #pc::after {content: \"🍕🍰\"; font-size: 300px; display: block;}</style>' +
-			'</head>'+
-			'<body><div id=\'pc\'></div></body></html>')
+	res.sendFile('./public/index.html');
 });
 
 app.listen(port, function(){
