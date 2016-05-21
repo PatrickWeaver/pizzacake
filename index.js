@@ -12,7 +12,7 @@ var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-pizzaRouter = require('./Routes/pizzaRoutes')(Pizza);
+pizzaRouter = require('./routes/pizzaRoutes')(Pizza);
 app.use('/api/Pizza', pizzaRouter);
 
 
