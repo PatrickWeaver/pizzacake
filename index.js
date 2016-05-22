@@ -4,7 +4,7 @@ var express = require('express'),
 
 var db;
 
-if (process.env.ENV == 'staging'){
+if (process.env.ENV == 'staging' || 'production'){
 	db = mongoose.connect(process.env.MONGODB_URI);
 } else {
 	db = mongoose.connect('mongodb://localhost/pcAPI');
