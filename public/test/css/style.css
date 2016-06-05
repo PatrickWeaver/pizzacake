@@ -1,0 +1,135 @@
+html {
+  box-sizing: border-box;
+  padding: 0;
+  magin: 0;
+}
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#preload-01 { background: url("../img/loading.gif") no-repeat -9999px -9999px; }
+#preload-02 { background: url("../img/pizza.svg") no-repeat -9999px -9999px; }
+#preload-03 { background: url("../img/cake.svg") no-repeat -9999px -9999px; }
+
+.ng-cloak { display:none; }
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+body {
+}
+
+#loading {
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url("../img/loading.gif") no-repeat fixed center;
+	background-color: white;
+}
+
+#switch {
+	border-radius: 70px;
+	width: 70px;
+	height: 70px;
+	float: right;
+	margin-top: 10px;
+	
+}
+
+.pizza-switch {
+	background: url("../img/pizza.svg") no-repeat center;
+	background-size: 60% 60%;
+	background-color: #FB2;
+}
+
+.cake-switch {
+	background: url("../img/cake.svg") no-repeat center;
+	background-size: 60% 60%;
+	background-color: #CD6162;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#container2 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#app {
+	z-index: 0;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	padding: 1px;
+}
+
+
+#pizza{
+	position: relative;
+}
+
+#cake {
+	position: relative;
+}
+
+.top {
+	height: 33%;
+	min-height: 200px;
+	position: relative;
+
+}
+
+.mid {
+	height: 34%;
+	padding: 0 20%;
+	position: relative;
+}
+
+.bottom {
+	height: 33%;
+	position: relative;
+}
+
+.pizza-app {
+	background: url("../img/pizza.svg");
+	background-size: 15px;
+}
+
+.cake-app {
+	background: url("../img/cake.svg");
+	background-size: 15px;
+}
+
+.data-box {
+	background-color: rgba(230, 230, 230, 0.8);
+	width: 80%;
+	margin: 150px 10% 50px;
+	padding: 40px;
+}
+
+.emage {
+	height: 100%;
+	width: 40%;
+	float: left;
+	box-sizing: border-box;
+	margin: 0 5%;
+}	

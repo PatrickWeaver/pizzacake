@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="pizzacake">
+
+<head>
+    <!-- Pizza and Cake icons adapted from: https://github.com/twitter/twemoji -->
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="apple-touch-icon" href="./icon.png">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#D83434">
+    <meta name="msapplication-TileImage" content="./icon.png">
+    <title>🍕🍰</title>
+</head>
+
+<body>
+<div id="preload-01"></div>
+<div id="preload-02"></div>
+<div id="preload-03"></div>
+    <div id="loading">
+    </div>
+    <div id="app">
+        <div class='top'>
+        </div>
+        <div id='pc' class='mid'>
+            <a href="pizza.html">
+                <div class="emage" onclick="loading()" >
+                    <img id="pizza" class="f" src="img/pizza.svg" >
+                </div>
+            </a>
+            <a href="cake.html">
+                <div class="emage"  onclick="loading()" >
+                    <img id="cake" class="f" src="img/cake.svg">
+                </div>
+            </a>
+
+        </div>
+        <div class='bottom'>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
